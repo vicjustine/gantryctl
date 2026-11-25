@@ -34,6 +34,7 @@ FLEET = {
     "panamax": Gantry("panamax", 40.0, 38.0, 24.0, 0.45),
     "postpanamax": Gantry("postpanamax", 65.0, 52.0, 32.0, 0.60),
     "neopanamax": Gantry("neopanamax", 80.0, 65.0, 40.0, 0.75),
+    "megamax": Gantry("megamax", 100.0, 72.0, 46.0, 0.85),
 }
 
 
