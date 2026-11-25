@@ -44,3 +44,12 @@ def test_safe_lift_reports_positive_margin():
 def test_custom_gantry_roundtrip():
     g = Gantry("test", 50.0, 40.0, 20.0, 1.0)
     assert g.swl_at(30.0) == 40.0
+    
+def test_megamax_is_in_the_fleet(): 
+    assert "megamax" in FLEET
+    assert FLEET["megamax"].max_swl_t == 100.0
+
+def test_megamax_derate_past_start(): 
+    g = FLEET["megamax"]
+    assert g.swl_at(46.0) == 100.0
+    assert g.swl_at(56.0) == pytest.approx(91.5)
